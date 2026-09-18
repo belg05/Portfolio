@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BELG — Саунд-дизайнер / Композитор | Портфолио</title>
+  <meta name="description" content="Глеб BELG — саунд-дизайнер и композитор с 5+ годами опыта. Атмосферные саундтреки, SFX, UI-звуки, FMOD/Wwise интеграция для игр, рекламы и кино." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Crect width='32' height='32' rx='8' fill='%23CCFF00'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='800' font-size='18' fill='black'%3EB%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <div class="logo-mark">B</div>
+        <div class="logo-text">BELG <span>/ SOUND</span></div>
+      </a>
+      <nav class="nav">
+        <a href="#portfolio" class="active">Портфолио</a>
+        <a href="#about">Резюме</a>
+        <a href="#services">Услуги</a>
+        <a href="#process">Процесс</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <div class="header-actions">
+        <div class="pill" style="display:none" id="header-pill"><span class="dot"></span> <b id="now-playing">DEMO</b> PLAYING</div>
+        <a href="#contact" class="btn btn-primary">Написать <span>↗</span></a>
+        <button class="burger" id="burger"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-top">
+      <div class="logo"><div class="logo-mark">B</div><div class="logo-text">BELG</div></div>
+      <button class="icon-btn" id="closeMenu">✕</button>
+    </div>
+    <a href="#portfolio" class="m-link">Портфолио</a>
+    <a href="#about" class="m-link">Резюме / Опыт</a>
+    <a href="#services" class="m-link">Услуги и цены</a>
+    <a href="#process" class="m-link">Как работаю</a>
+    <a href="#contact" class="m-link">Контакты</a>
+    <div style="margin-top:auto;padding-top:32px">
+      <div class="contact-links">
+        <a class="c-link" href="https://t.me/belg_pr" target="_blank"><i>TG</i><div><b>@belg_pr</b><span>Telegram</span></div></a>
+        <a class="c-link" href="mailto:belg.pr@gmail.com"><i>@</i><div><b>belg.pr@gmail.com</b><span>Email</span></div></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="pill" style="margin-bottom:20px"><span class="dot"></span> Открыт к проектам • Геймдев • Доступен для фриланса</div>
+          <h1>
+            <span class="outline">ЗВУК,</span>
+            КОТОРЫЙ
+            <span class="accent">ЗАПОМИНАЕТСЯ</span>
+          </h1>
+          <div class="hero-sub">
+            <div class="mono" style="font-size:11px;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;line-height:1.6">
+              [05+ лет]<br/>[50+ проектов]<br/>[FL • FMOD • WWise]
+            </div>
+            <p>
+              Привет, я <b style="color:var(--text)">Глеб</b> — саунд-дизайнер и композитор. Создаю атмосферные саундтреки, SFX, UI-звуки и делаю имплементацию в Unity. Понимаю драматургию и умею передавать настроение через звук.
+            </p>
+          </div>
+          <div class="hero-meta">
+            <a href="#portfolio" class="btn btn-primary btn-lg">Слушать работы <span>▶</span></a>
+            <a href="https://drive.google.com/drive/folders/1_9MsLRO_MVdzQR0Jp9XiWXmrl8?usp=sharing" target="_blank" class="btn btn-ghost btn-lg">Портфолио Drive ↗</a>
+          </div>
+          <div style="margin-top:32px;display:flex;gap:24px;flex-wrap:wrap">
+            <div><div class="syne" style="font-size:28px;font-weight:800">5+</div><div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase">Лет в индустрии</div></div>
+            <div style="width:1px;background:var(--line)"></div>
+            <div><div class="syne" style="font-size:28px;font-weight:800">3</div><div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase">Движка • Unity FMOD Wwise</div></div>
+            <div style="width:1px;background:var(--line)"></div>
+            <div><div class="syne" style="font-size:28px;font-weight:800">∞</div><div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase">Стилей музыки</div></div>
+          </div>
+        </div>
+
+        <div class="hero-visual" id="heroVisual">
+          <div class="hero-visual-top">
+            <div class="pill"><span class="dot"></span> LIVE PREVIEW</div>
+            <div class="mono" style="font-size:10px;color:var(--muted)">FL STUDIO • 48kHz / 24bit</div>
+          </div>
+          <div class="visualizer" id="visualizer"></div>
+          <div class="hero-player">
+            <div class="player-row">
+              <div class="player-cover">♪</div>
+              <div class="player-info">
+                <div class="player-title" id="playerTitle">Cyber Forest — Ambient Exploration (Demo)</div>
+                <div class="player-sub"><span id="playerTime">01:24</span> / 03:42 • Game OST • Adaptive</div>
+              </div>
+              <div class="player-controls">
+                <button class="icon-btn" id="prevTrack">⏮</button>
+                <button class="icon-btn" id="playBtn" style="background:var(--lime);color:#000;border-color:var(--lime)">▶</button>
+                <button class="icon-btn" id="nextTrack">⏭</button>
+              </div>
+            </div>
+            <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee">
+    <div class="marquee-track" id="marqueeTrack">
+      <!-- JS will duplicate -->
+      <div class="marquee-item"><b>Game Soundtrack</b><span class="marquee-dot"></span></div>
+      <div class="marquee-item"><b>SFX Design</b><span class="marquee-dot"></span></div>
+      <div class="marquee-item"><b>UI Sounds</b><span class="marquee-dot"></span></div>
+      <div class="marquee-item"><b>FMOD / Wwise</b><span class="marquee-dot"></span></div>
+      <div class="marquee-item"><b>Trailer Music</b><span class="marquee-dot"></span></div>
+      <div class="marquee-item"><b>Adaptive Audio</b><span class="marquee-dot"></span></div>
+      <div class="marquee-item"><b>Unity Implementation</b><span class="marquee-dot"></span></div>
+      <div class="marquee-item"><b>Atmospheric Textures</b><span class="marquee-dot"></span></div>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Портфолио <span>/ 2020—2025</span></h2>
+        <p class="section-desc">От атмосферных саундтреков для инди-игр до трейлеров и рекламы. Каждый звук — часть драматургии. Кликни ▶ чтобы послушать, или переходи по ссылкам на живые проекты.</p>
+      </div>
+
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="all">Все работы</button>
+        <button class="filter-btn" data-filter="games">Games / OST</button>
+        <button class="filter-btn" data-filter="sfx">SFX / UI</button>
+        <button class="filter-btn" data-filter="film">Film / Ads / Anim</button>
+        <button class="filter-btn" data-filter="beats">Beats</button>
+      </div>
+
+      <div class="grid-portfolio" id="portfolioGrid">
+        <!-- Cards injected by JS -->
+      </div>
+
+      <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap">
+        <a href="https://drive.google.com/drive/folders/1_9MsLRO_MVdzQR0Jp9XiWXmrl8?usp=sharing" target="_blank" class="btn btn-ghost">📁 Google Drive Portfolio ↗</a>
+        <a href="https://t.me/+bOpSpQd8UjdkNGFi" target="_blank" class="btn btn-ghost">✈️ Telegram Портфолио ↗</a>
+        <a href="https://t.me/myzod3ad" target="_blank" class="btn btn-ghost">🎧 Beats Channel ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWREEL -->
+  <section class="section" style="background:var(--bg-2);border-block:1px solid var(--line)">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Шоурилы <span>/ FMOD & Wwise</span></h2>
+        <p class="section-desc">Имплементация и адаптивная музыка в действии. Посмотри, как звук реагирует на геймплей.</p>
+      </div>
+      <div class="showreel-grid">
+        <div class="showreel-card">
+          <iframe class="showreel-iframe" src="https://www.youtube.com/embed/vLHIWrCV2MA" title="FMOD Showreel" allowfullscreen loading="lazy"></iframe>
+          <div class="showreel-meta">
+            <div><h4>FMOD Showreel — Adaptive Music & SFX</h4><p>Unity • FMOD • Adaptive OST • Footsteps, Ambience, Music System</p></div>
+            <span class="badge-new">FMOD</span>
+          </div>
+        </div>
+        <div class="showreel-card">
+          <iframe class="showreel-iframe" src="https://www.youtube.com/embed/aAikR7Be7LE" title="Wwise Showreel" allowfullscreen loading="lazy"></iframe>
+          <div class="showreel-meta">
+            <div><h4>Wwise Showreel — Interactive Audio</h4><p>Wwise • Unity • RTPC, States, Switches • Full Implementation</p></div>
+            <span class="badge-new" style="background:var(--violet);color:white">WWISE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / RESUME -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Резюме <span>/ Обо мне</span></h2>
+        <div class="pill">Глеб • BELG • Саунд-дизайнер / Композитор / Гейм-дизайнер</div>
+      </div>
+
+      <div class="about-grid">
+        <div>
+          <h3 class="syne" style="font-size:22px;margin-bottom:20px">Опыт работы</h3>
+          <div class="timeline">
+            <div class="t-item">
+              <div class="t-year">2024 — настоящее</div>
+              <div class="t-role">Freelance Sound Designer / Composer — Геймдев</div>
+              <div class="t-desc">Работа с инди-командами и сольными разработчиками. Пишу музыку, делаю SFX/UI, имплементирую через FMOD и Wwise в Unity. Работаю по брифу и в команде с гейм-дизайнерами, сценаристами, режиссёрами.</div>
+            </div>
+            <div class="t-item">
+              <div class="t-year">2022 — 2024</div>
+              <div class="t-role">Sound Designer в инди-командах</div>
+              <div class="t-desc">Участие в нескольких инди-проектах как саунд-дизайнер и композитор. Создание атмосферных саундтреков с уклоном в гейм-дизайн звучания. Работа со звуковыми текстурами, шумами, SFX.</div>
+            </div>
+            <div class="t-item">
+              <div class="t-year">2020 — 2022</div>
+              <div class="t-role">Beatmaker / Composer для исполнителей</div>
+              <div class="t-desc">Писал биты для исполнителей, работал с драматургией трека, адаптировал музыку под стиль проекта. Развил навык быстрого прототипирования идей.</div>
+            </div>
+            <div class="t-item">
+              <div class="t-year">2019 — 2020</div>
+              <div class="t-role">Старт пути • FL Studio • Саунд-дизайн</div>
+              <div class="t-desc">Самообучение, первые заказы, погружение в гейм-аудио. Изучение FMOD, Wwise, основ имплементации.</div>
+            </div>
+          </div>
+
+          <h3 class="syne" style="font-size:22px;margin:36px 0 20px">Образование</h3>
+          <div class="skill-card">
+            <div class="skill-head"><span class="skill-name">Самообразование + Курсы</span><span class="skill-pct">2019—2025</span></div>
+            <div class="t-desc">Курсы по саунд-дизайну, музыкальной теории, FMOD & Wwise сертификация, гейм-дизайн. Постоянное изучение новых техник и инструментов. Практика на реальных проектах.</div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="syne" style="font-size:22px;margin-bottom:20px">Что умею</h3>
+          <div class="skills">
+            <div class="skill-card"><div class="skill-head"><span class="skill-name">Game OST / Adaptive Music</span><span class="skill-pct">95%</span></div><div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
+            <div class="skill-card"><div class="skill-head"><span class="skill-name">SFX / UI / Textures</span><span class="skill-pct">92%</span></div><div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div></div>
+            <div class="skill-card"><div class="skill-head"><span class="skill-name">FMOD / Wwise / Unity</span><span class="skill-pct">88%</span></div><div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div></div>
+            <div class="skill-card"><div class="skill-head"><span class="skill-name">Драматургия / Настроение</span><span class="skill-pct">90%</span></div><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
+            <div class="skill-card"><div class="skill-head"><span class="skill-name">Трейлеры / Реклама / Кино</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
+            <div class="skill-card"><div class="skill-head"><span class="skill-name">Гейм-дизайн (смежно)</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div></div>
+          </div>
+
+          <h3 class="syne" style="font-size:18px;margin:32px 0 16px">Инструменты</h3>
+          <div class="tools">
+            <div class="tool"><i>FL</i> FL Studio</div>
+            <div class="tool"><i>FM</i> FMOD Studio</div>
+            <div class="tool"><i>Ww</i> Wwise</div>
+            <div class="tool"><i>U</i> Unity</div>
+            <div class="tool"><i>🎛</i> FabFilter / Ozone</div>
+            <div class="tool"><i>🎹</i> Serum / Vital / Kontakt</div>
+            <div class="tool"><i>🎙</i> Field Recording</div>
+            <div class="tool"><i>👥</i> Teamwork / Бриф</div>
+          </div>
+
+          <div style="margin-top:32px;padding:20px;border-radius:16px;background:linear-gradient(135deg, rgba(204,255,0,0.12), rgba(139,92,246,0.12));border:1px solid rgba(204,255,0,0.2)">
+            <div class="mono" style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--lime);margin-bottom:8px">Философия</div>
+            <p style="font-size:14px;line-height:1.6;color:var(--text)">«Звук — это 50% погружения. Я не просто пишу музыку, я проектирую эмоцию. Понимаю, как звук ведёт игрока, как тишина может быть громче взрыва, и как одна нота меняет драматургию сцены.»</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services" style="background:var(--bg-2);border-block:1px solid var(--line)">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Услуги <span>/ Прайс</span></h2>
+        <p class="section-desc">Честные цены, гибкий подход. Пакеты для инди и кастомизация под ваш проект. Калькулятор ниже посчитает точную стоимость.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="price-table">
+          <div class="price-head">
+            <h3 class="syne" style="font-size:20px">Прайс-лист</h3>
+            <div class="pill">Цены от • RUB / USD</div>
+          </div>
+          <div class="price-row">
+            <div><div class="price-name">SFX пак — 10 звуков <span class="badge-new">POPULAR</span></div><div class="price-desc">Footsteps, impacts, UI, ambience — на выбор, с вариациями</div></div>
+            <div class="price-val">3 000₽ <span>/ $35</span></div>
+            <div><button class="btn btn-ghost" style="padding:6px 12px;font-size:11px" onclick="selectService('sfx10')">Выбрать</button></div>
+          </div>
+          <div class="price-row">
+            <div><div class="price-name">UI звуки — сет (15-20 шт)</div><div class="price-desc">Клики, ховеры, нотификации, success/error — cohesive set</div></div>
+            <div class="price-val">2 500₽ <span>/ $30</span></div>
+            <div><button class="btn btn-ghost" style="padding:6px 12px;font-size:11px" onclick="selectService('ui')">Выбрать</button></div>
+          </div>
+          <div class="price-row">
+            <div><div class="price-name">Music Track — Loop 1-2 мин</div><div class="price-desc">Оригинальный трек, loop-ready, 2 ревизии, WAV/MP3/OGG</div></div>
+            <div class="price-val">5 000₽ <span>/ $60</span></div>
+            <div><button class="btn btn-ghost" style="padding:6px 12px;font-size:11px" onclick="selectService('track')">Выбрать</button></div>
+          </div>
+          <div class="price-row">
+            <div><div class="price-name">Adaptive OST — 3-4 мин <span class="badge-new" style="background:var(--violet);color:white">ADAPTIVE</span></div><div class="price-desc">Многослойный трек с вертикальным миксом, FMOD/Wwise-ready</div></div>
+            <div class="price-val">12 000₽ <span>/ $140</span></div>
+            <div><button class="btn btn-ghost" style="padding:6px 12px;font-size:11px" onclick="selectService('adaptive')">Выбрать</button></div>
+          </div>
+          <div class="price-row">
+            <div><div class="price-name">Trailer / Ad Music — 30-60 сек</div><div class="price-desc">Эпик, эмоциональный, под монтаж — с hits, risers, whooshes</div></div>
+            <div class="price-val">7 000₽ <span>/ $80</span></div>
+            <div><button class="btn btn-ghost" style="padding:6px 12px;font-size:11px" onclick="selectService('trailer')">Выбрать</button></div>
+          </div>
+          <div class="price-row">
+            <div><div class="price-name">FMOD / Wwise Implementation</div><div class="price-desc">Интеграция в Unity, настройка ивентов, RTPC, states, миксов</div></div>
+            <div class="price-val">2 000₽/ч <span>/ $25/h</span></div>
+            <div><button class="btn btn-ghost" style="padding:6px 12px;font-size:11px" onclick="selectService('impl')">Выбрать</button></div>
+          </div>
+          <div class="price-row" style="background:linear-gradient(90deg, rgba(204,255,0,0.06), transparent)">
+            <div><div class="price-name">Full Audio для инди-игры (Small)</div><div class="price-desc">До 10 треков + 50 SFX + UI + имплементация — пакет со скидкой 20%</div></div>
+            <div class="price-val">25 000₽ <span>/ $290</span></div>
+            <div><button class="btn btn-primary" style="padding:6px 12px;font-size:11px" onclick="selectService('full')">Выбрать</button></div>
+          </div>
+        </div>
+
+        <div class="calc" id="calculator">
+          <h3>Калькулятор</h3>
+          <p class="calc-sub">Собери свой пакет и получи мгновенный расчёт + отправь бриф мне</p>
+
+          <div class="field">
+            <label>Тип услуги</label>
+            <select class="select" id="calcType">
+              <option value="sfx10">SFX пак (10 звуков) — 3000₽</option>
+              <option value="ui">UI сет — 2500₽</option>
+              <option value="track">Music Track Loop — 5000₽</option>
+              <option value="adaptive">Adaptive OST 3-4мин — 12000₽</option>
+              <option value="trailer">Trailer / Ad — 7000₽</option>
+              <option value="full">Full Indie Game Audio — 25000₽</option>
+              <option value="custom">Кастом / Час — 2000₽/ч</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <div class="range-wrap"><label>Количество / Длительность</label><span class="range-val" id="qtyVal">1×</span></div>
+            <input type="range" class="range" id="calcQty" min="1" max="10" value="1" />
+            <div class="mono" style="font-size:10px;color:var(--muted);display:flex;justify-content:space-between;margin-top:4px"><span>1</span><span>10</span></div>
+          </div>
+
+          <div class="field">
+            <label>Сложность</label>
+            <select class="select" id="calcComplexity">
+              <option value="1">Стандарт — x1</option>
+              <option value="1.3">Продвинутый (много слоёв, дизайн) — x1.3</option>
+              <option value="1.6">Премиум (field recording, живой звук) — x1.6</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Дополнительно</label>
+            <div class="checks">
+              <label class="check"><input type="checkbox" id="checkImpl" /> <span>FMOD/Wwise имплементация (+30%)</span></label>
+              <label class="check"><input type="checkbox" id="checkUrgent" /> <span>Срочно 48ч (+40%)</span></label>
+              <label class="check"><input type="checkbox" id="checkRev" /> <span>+2 ревизии сверх нормы (+15%)</span></label>
+              <label class="check"><input type="checkbox" id="checkStem" /> <span>Стемы / исходники (+20%)</span></label>
+            </div>
+          </div>
+
+          <div class="calc-total">
+            <div><div class="mono" style="font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase">Итого</div><div class="mono" style="font-size:11px;color:var(--muted)">без учёта скидок на пакеты</div></div>
+            <b id="calcTotal">3 000₽</b>
+          </div>
+          <div class="calc-note">* Финальная цена обсуждается после брифа. Для инди-команд — гибкие условия и рассрочка. Напиши, и я предложу оптимальный вариант под бюджет.</div>
+
+          <button class="btn btn-primary btn-lg" style="width:100%;margin-top:20px" id="calcSend">Отправить расчёт на оценку ↗</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section" id="process">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Как работаю</h2>
+        <p class="section-desc">Прозрачный процесс, быстрая коммуникация, работа по брифу. От идеи до имплементации в движок.</p>
+      </div>
+      <div class="process-grid">
+        <div class="step"><div class="step-num">01</div><h4>Бриф & Референсы</h4><p>Обсуждаем стиль, мудборд, референсы, техтребования. Составляю ТЗ и таймлайн.</p></div>
+        <div class="step"><div class="step-num">02</div><h4>Демо / Скетч</h4><p>Быстрый скетч 20-30 сек, чтобы попасть в вайб. 1-2 итерации до утверждения направления.</p></div>
+        <div class="step"><div class="step-num">03</div><h4>Продакшн</h4><p>Полноценное создание музыки/SFX. Слои, текстуры, микс. Промежуточные апдейты.</p></div>
+        <div class="step"><div class="step-num">04</div><h4>Имплементация</h4><p>Настройка в FMOD/Wwise, интеграция в Unity, RTPC, states, adaptive logic. Тест в билде.</p></div>
+        <div class="step"><div class="step-num">05</div><h4>Доставка & Поддержка</h4><p>Финальные файлы (WAV, OGG, MP3), проектные файлы по запросу, поддержка после релиза.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" style="background:var(--bg-2);border-top:1px solid var(--line)">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Отзывы <span>/ Клиенты</span></h2>
+        <div class="pill">4.9 / 5 • 12 отзывов • 100% рекомендуют</div>
+      </div>
+      <div class="testi-grid">
+        <div class="testi">
+          <div class="testi-top"><div class="avatar">AD</div><div><div class="testi-name">Алексей Д.</div><div class="testi-role">Indie Dev • Platformer «Lumen»</div></div></div>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">«Глеб сделал магию. Атмосферный OST, который идеально ложится на геймплей. Плюс сам всё завёл в FMOD, мне осталось только нажать Play. Очень быстро и по брифу.»</p>
+        </div>
+        <div class="testi">
+          <div class="testi-top"><div class="avatar">MK</div><div><div class="testi-name">Мария К.</div><div class="testi-role">Анимационная студия • Short Film</div></div></div>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">«Нужен был звук, который передаёт тревогу через тишину. Глеб понял с полуслова. Саунд-дизайн добавил глубины, которую мы даже не ожидали. Рекомендую!»</p>
+        </div>
+        <div class="testi">
+          <div class="testi-top"><div class="avatar">JR</div><div><div class="testi-name">J. Rivera</div><div class="testi-role">Game Designer • USA • Horror Prototype</div></div></div>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">«Great communication, understands game audio implementation. Wwise integration was flawless, adaptive music system works perfectly. Will hire again for full game.»</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Давай делать<br/>крутой звук</h2>
+        <p class="section-desc">Открыт к сотрудничеству. Готов вкладываться в проект и делать звук, который запомнится. Ответ в течение часа в рабочее время.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Связь</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6">Удобнее всего — Telegram. Но почта тоже всегда на связи. Можем созвониться и обсудить проект голосом.</p>
+          <div class="contact-links">
+            <a class="c-link" href="https://t.me/belg_pr" target="_blank"><i>✈️</i><div><b>@belg_pr — Telegram</b><span>Пишу быстро • Отвечаю в течение часа</span></div></a>
+            <a class="c-link" href="mailto:belg.pr@gmail.com"><i>@</i><div><b>belg.pr@gmail.com</b><span>Email для брифов и файлов</span></div></a>
+            <a class="c-link" href="https://drive.google.com/drive/folders/1_9MsLRO_MVdzQR0Jp9XiWXmrl8?usp=sharing" target="_blank"><i>📁</i><div><b>Google Drive Portfolio</b><span>Все работы в одном месте</span></div></a>
+            <a class="c-link" href="https://t.me/myzod3ad" target="_blank"><i>🎧</i><div><b>Beats Channel</b><span>t.me/myzod3ad</span></div></a>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <span class="pill">FL Studio</span><span class="pill">FMOD</span><span class="pill">Wwise</span><span class="pill">Unity</span><span class="pill">Remote</span>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-grid">
+            <div class="form-field"><label class="mono" style="font-size:11px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;display:block">Имя</label><input class="input" name="name" placeholder="Как к тебе обращаться?" required /></div>
+            <div class="form-field"><label class="mono" style="font-size:11px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;display:block">Контакт (TG / Email)</label><input class="input" name="contact" placeholder="@telegram или email" required /></div>
+            <div class="form-field"><label class="mono" style="font-size:11px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;display:block">Тип проекта</label><select class="select" name="projectType" id="formProjectType"><option>Игра (Indie)</option><option>Игра (Mobile)</option><option>Анимация / Фильм</option><option>Реклама / Трейлер</option><option>SFX / UI пак</option><option>Биты / Музыка для артиста</option><option>Другое</option></select></div>
+            <div class="form-field"><label class="mono" style="font-size:11px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;display:block">Бюджет</label><select class="select" name="budget"><option>До 5 000₽</option><option>5 000 — 15 000₽</option><option>15 000 — 30 000₽</option><option>30 000 — 60 000₽</option><option>60 000₽+</option><option>Обсудим</option></select></div>
+            <div class="form-field full"><label class="mono" style="font-size:11px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;display:block">Расскажи о проекте + расчёт из калькулятора</label><textarea class="input textarea" name="message" id="formMessage" placeholder="Жанр, референсы, сроки, что нужно сделать? Чем больше деталей — тем точнее оценка."></textarea></div>
+          </div>
+          <div class="form-foot">
+            <div class="form-note">Нажимая «Отправить», ты соглашаешься, что я отвечу тебе в TG или на почту. Никакого спама.</div>
+            <button type="submit" class="btn btn-primary btn-lg">Отправить бриф ↗</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div style="display:flex;align-items:center;gap:12px">
+        <div class="logo-mark">B</div>
+        <div><div style="font-weight:700">BELG © 2025</div><div class="mono" style="font-size:11px;color:var(--muted)">Саунд-дизайнер / Композитор • 5+ лет • Геймдев</div></div>
+      </div>
+      <div class="footer-links">
+        <a href="https://t.me/belg_pr" target="_blank">Telegram</a>
+        <a href="mailto:belg.pr@gmail.com">Email</a>
+        <a href="https://www.youtube.com/watch?v=vLHIWrCV2MA" target="_blank">YouTube</a>
+        <a href="#portfolio">Портфолио</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"><span>✓</span><span id="toastText">Скопировано</span></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
